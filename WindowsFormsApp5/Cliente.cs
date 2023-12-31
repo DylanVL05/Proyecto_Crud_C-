@@ -14,17 +14,54 @@ namespace WindowsFormsApp5
     {
         private ConexionBD conexionBD = new ConexionBD();
         private bool filaSeleccionada = false;
+        private BindingSource bindingSource = new BindingSource();
+
+
+
 
         public Cliente()
         {
             InitializeComponent();
 
-            // Configura el DataGridView y otros componentes según sea necesario
-            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
-            // Llamada al método para cargar los datos en el DataGridView
+            // Configura el BindingSource y carga los datos
+            bindingSource.DataSource = typeof(DataTable);
+            dataGridView1.DataSource = bindingSource;
+
+            // Configura el máximo del VScrollBar
+            vScrollBar1.Maximum = dataGridView1.RowCount - dataGridView1.DisplayedRowCount(false) + 1;
+
+            // Configura el evento Scroll del VScrollBar
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
+
+            // Carga los datos iniciales de clientes
             CargarDatosClientes();
         }
 
+        private void CargarDatosClientes()
+        {
+            DataTable datosClientes = conexionBD.ObtenerDatosClientes();
+            bindingSource.DataSource = datosClientes;
+
+            // Actualiza el rango del VScrollBar
+            vScrollBar1.Maximum = dataGridView1.RowCount - dataGridView1.DisplayedRowCount(false) + 1;
+        }
+
+
+
+        /*
+        public Cliente()
+        {
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            InitializeComponent();
+    
+            // Configura el DataGridView y otros componentes según sea necesario
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+            // Llamada al método para cargar los datos en el DataGridView
+            bindingSource.DataSource = typeof(DataTable);
+            dataGridView1.DataSource = bindingSource;
+            CargarDatosClientes();
+        }
+        
         private void CargarDatosClientes()
         {
             // No es necesario crear una nueva instancia de ConexionBD aquí
@@ -33,7 +70,11 @@ namespace WindowsFormsApp5
 
             // Asigna datos al DataGridView
             dataGridView1.DataSource = datosClientes;
+            bindingSource.DataSource = datosClientes;
+            vScrollBar1.Maximum = bindingSource.Count - dataGridView1.DisplayedRowCount(false) + 1;
+
         }
+        */
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -213,6 +254,15 @@ namespace WindowsFormsApp5
                 // Opcional: Mostrar un mensaje de éxito
                 MessageBox.Show("Cliente eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            int newPosition = e.NewValue;
+            bindingSource.Position = newPosition;
+
         }
     }
 }

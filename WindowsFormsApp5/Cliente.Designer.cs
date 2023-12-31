@@ -38,17 +38,19 @@ namespace WindowsFormsApp5
             this.materialButton1_Agregar = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2_Eliminar = new MaterialSkin.Controls.MaterialButton();
             this.materialButton3_editar = new MaterialSkin.Controls.MaterialButton();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(380, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(298, 57);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(574, 441);
+            this.dataGridView1.Size = new System.Drawing.Size(383, 287);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -66,7 +68,8 @@ namespace WindowsFormsApp5
             this.nombre_textbox.HideSelection = true;
             this.nombre_textbox.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.nombre_textbox.LeadingIcon = null;
-            this.nombre_textbox.Location = new System.Drawing.Point(101, 93);
+            this.nombre_textbox.Location = new System.Drawing.Point(103, 57);
+            this.nombre_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nombre_textbox.Mask = "";
             this.nombre_textbox.MaxLength = 32767;
             this.nombre_textbox.MouseState = MaterialSkin.MouseState.OUT;
@@ -83,7 +86,7 @@ namespace WindowsFormsApp5
             this.nombre_textbox.SelectionLength = 0;
             this.nombre_textbox.SelectionStart = 0;
             this.nombre_textbox.ShortcutsEnabled = true;
-            this.nombre_textbox.Size = new System.Drawing.Size(243, 48);
+            this.nombre_textbox.Size = new System.Drawing.Size(162, 48);
             this.nombre_textbox.SkipLiterals = true;
             this.nombre_textbox.TabIndex = 1;
             this.nombre_textbox.TabStop = false;
@@ -108,7 +111,8 @@ namespace WindowsFormsApp5
             this.correo_textbox.HideSelection = true;
             this.correo_textbox.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.correo_textbox.LeadingIcon = null;
-            this.correo_textbox.Location = new System.Drawing.Point(101, 168);
+            this.correo_textbox.Location = new System.Drawing.Point(103, 109);
+            this.correo_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.correo_textbox.Mask = "";
             this.correo_textbox.MaxLength = 32767;
             this.correo_textbox.MouseState = MaterialSkin.MouseState.OUT;
@@ -125,7 +129,7 @@ namespace WindowsFormsApp5
             this.correo_textbox.SelectionLength = 0;
             this.correo_textbox.SelectionStart = 0;
             this.correo_textbox.ShortcutsEnabled = true;
-            this.correo_textbox.Size = new System.Drawing.Size(250, 48);
+            this.correo_textbox.Size = new System.Drawing.Size(167, 48);
             this.correo_textbox.SkipLiterals = true;
             this.correo_textbox.TabIndex = 2;
             this.correo_textbox.TabStop = false;
@@ -142,7 +146,8 @@ namespace WindowsFormsApp5
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel1.Location = new System.Drawing.Point(595, 9);
+            this.materialLabel1.Location = new System.Drawing.Point(425, 9);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(123, 41);
@@ -155,7 +160,8 @@ namespace WindowsFormsApp5
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel2.Location = new System.Drawing.Point(12, 187);
+            this.materialLabel2.Location = new System.Drawing.Point(10, 128);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(71, 29);
@@ -168,7 +174,8 @@ namespace WindowsFormsApp5
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel3.Location = new System.Drawing.Point(12, 102);
+            this.materialLabel3.Location = new System.Drawing.Point(8, 66);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(83, 29);
@@ -182,8 +189,8 @@ namespace WindowsFormsApp5
             this.materialButton1_Agregar.Depth = 0;
             this.materialButton1_Agregar.HighEmphasis = true;
             this.materialButton1_Agregar.Icon = null;
-            this.materialButton1_Agregar.Location = new System.Drawing.Point(53, 451);
-            this.materialButton1_Agregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1_Agregar.Location = new System.Drawing.Point(3, 255);
+            this.materialButton1_Agregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialButton1_Agregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1_Agregar.Name = "materialButton1_Agregar";
             this.materialButton1_Agregar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -202,8 +209,8 @@ namespace WindowsFormsApp5
             this.materialButton2_Eliminar.Depth = 0;
             this.materialButton2_Eliminar.HighEmphasis = true;
             this.materialButton2_Eliminar.Icon = null;
-            this.materialButton2_Eliminar.Location = new System.Drawing.Point(53, 296);
-            this.materialButton2_Eliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2_Eliminar.Location = new System.Drawing.Point(108, 255);
+            this.materialButton2_Eliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialButton2_Eliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2_Eliminar.Name = "materialButton2_Eliminar";
             this.materialButton2_Eliminar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -222,8 +229,8 @@ namespace WindowsFormsApp5
             this.materialButton3_editar.Depth = 0;
             this.materialButton3_editar.HighEmphasis = true;
             this.materialButton3_editar.Icon = null;
-            this.materialButton3_editar.Location = new System.Drawing.Point(53, 373);
-            this.materialButton3_editar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3_editar.Location = new System.Drawing.Point(211, 255);
+            this.materialButton3_editar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.materialButton3_editar.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton3_editar.Name = "materialButton3_editar";
             this.materialButton3_editar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -235,12 +242,21 @@ namespace WindowsFormsApp5
             this.materialButton3_editar.UseVisualStyleBackColor = true;
             this.materialButton3_editar.Click += new System.EventHandler(this.materialButton3_editar_Click);
             // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(664, 57);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 287);
+            this.vScrollBar1.TabIndex = 9;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
+            // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(990, 551);
+            this.ClientSize = new System.Drawing.Size(708, 380);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.materialButton3_editar);
             this.Controls.Add(this.materialButton2_Eliminar);
             this.Controls.Add(this.materialButton1_Agregar);
@@ -251,6 +267,7 @@ namespace WindowsFormsApp5
             this.Controls.Add(this.nombre_textbox);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.Coral;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Cliente";
             this.Text = "Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -270,5 +287,6 @@ namespace WindowsFormsApp5
         private MaterialSkin.Controls.MaterialButton materialButton1_Agregar;
         private MaterialSkin.Controls.MaterialButton materialButton2_Eliminar;
         private MaterialSkin.Controls.MaterialButton materialButton3_editar;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
